@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JamesRobertHugginsNgo/usage#readme",
   "devDependencies": {
+    "env-log": "github:JamesRobertHugginsNgo/env-log#1.1.0",
     "eslint": "^8.30.0"
   },
   "dependencies": {

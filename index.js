@@ -1,7 +1,12 @@
 const ANSI_COLOURS = require('ansi-colours');
+const EnvLog = require('env-log');
 const Path = require('path');
 
+const ENV_LOG_VAR = 'USAGE_LOG';
+
 function usage(configs) {
+	const log = EnvLog.factory(ENV_LOG_VAR);
+
 	return new Promise((resolve, reject) => {
 		const [node, script, ...argv] = process.argv;
 
@@ -18,11 +23,13 @@ function usage(configs) {
 
 			// Found as function
 			if (typeof configs[argvN] === 'function') {
+				log && log(`Running ${argvN}`);
 				return resolve(configs[argvN](...argv));
 			}
 
 			// Found as object with callback
 			if (configs[argvN].callback) {
+				log && log(`Running ${argvN}`);
 				return resolve(configs[argvN].callback(...argv));
 			}
 
@@ -53,6 +60,8 @@ function usage(configs) {
 					: '';
 			meta[key] = { args, desc };
 		}
+
+		log && log(`Script not found`);
 
 		// Build common prefix
 		const prefixNode = Path.basename(node, Path.extname(node));
