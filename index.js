@@ -47,9 +47,7 @@ function usage(configs) {
 				longestKeySize = key.length;
 			}
 			const config = configs[key];
-			const args = Array.isArray(config.args)
-				? config.args.join(' ')
-				: config.args || '';
+			const args = config.args || '';
 			if (args.length > longestArgsSize) {
 				longestArgsSize = args.length;
 			}
