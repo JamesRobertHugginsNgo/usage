@@ -1,13 +1,13 @@
 # usage
 
-Version 1.1.0
+Version 2.0.0
 
 A NodeJS library for creating dev-tools/scripts.
 
 ## Installation
 
 ```
-npm install git+https://github.com/JamesRobertHugginsNgo/usage.git#1.1.0
+npm install git+https://github.com/JamesRobertHugginsNgo/usage.git#2.0.0
 ```
 
 ## usage(configs)
