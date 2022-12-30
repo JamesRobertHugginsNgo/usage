@@ -53,7 +53,7 @@ usage({
 
 ## USAGE_LOG
 
-Environment variable which shows script run when set.
+Environment variable which shows additional information when set to a value.
 
 ```
 USAGE_LOG=true nodejs index
