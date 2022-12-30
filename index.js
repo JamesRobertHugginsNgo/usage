@@ -7,7 +7,7 @@ const ENV_LOG_VAR = 'USAGE_LOG';
 function usage(configs) {
 	const log = EnvLog.factory(ENV_LOG_VAR);
 
-	const promise = new Promise((resolve, reject) => {
+	const promise = new Promise((resolve) => {
 		const [node, script, ...argv] = process.argv;
 
 		// Find the correct callback or exit loop to show usage information
@@ -77,8 +77,7 @@ function usage(configs) {
 		}
 		console.groupEnd();
 
-		// Return an error
-		reject('Script Not Found');
+		resolve();
 	});
 
 	if (log) {
