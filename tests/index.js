@@ -6,8 +6,7 @@ const configConfig = {
 	},
 
 	'argTwo': {
-		args: 'ID',
-		desc: 'Description',
+
 		callback: (...args) => {
 			console.log('argTwo', ...args);
 		}
