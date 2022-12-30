@@ -40,6 +40,4 @@ usage(configConfig).then(() => {
 	console.log('COMPLETE');
 }, (error) => {
 	console.log('COMPLETE WITH ERROR:', error);
-}).then(() => {
-	console.log();
 });
