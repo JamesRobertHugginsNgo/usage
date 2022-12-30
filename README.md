@@ -29,17 +29,17 @@ usage({
         }
     },
     'more': {
-        'script3': {
+        'script3': () => {
+            // DO SOMETHING HERE
+        },
+        'script4': {
             args: 'ARG1 [ARG2]',
             desc: 'Add description here',
             callback: (arg1, arg2) => {
-                // DO SOMETHING HERE
-            }
-        },
-        'script4': {
-            args: ['ARG1', 'ARG2'],
-            desc: 'Add description here',
-            callback: (arg1, arg2) => {
+                if (arg1 == null) {
+                    throw 'Missing required argument';
+                }
+
                 // DO SOMETHING HERE
             }
         }
